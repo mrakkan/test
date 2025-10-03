@@ -5,15 +5,5 @@
 </head>
 <body>
   <h1>Hello from Frontend!</h1>
-  <button onclick="callAPI()">Call Backend</button>
-  <p id="result"></p>
-
-  <script>
-    async function callAPI() {
-      let res = await fetch("http://localhost:5000/api/hello");
-      let data = await res.json();
-      document.getElementById("result").innerText = data.message;
-    }
-  </script>
 </body>
 </html>
