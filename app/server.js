@@ -4,16 +4,13 @@ const app = express();
 
 
 // Serve static files
-app.use(express.static(path.join(__dirname)));
+const port = process.env.PORT || 80;
+const host = '0.0.0.0';
 
-app.get("/health", (req, res) => {
-  res.send("OK");
+app.get('/health', (req, res) => res.send('ok'));
+
+app.listen(port, host, () => {
+  console.log(`Server listening on http://${host}:${port}`);
 });
-
-app.get("/", (req, res) => {
-  res.send("Hello, World!");
-});
-
-
 
 
