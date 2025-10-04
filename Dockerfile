@@ -9,6 +9,6 @@ RUN npm install
 # Copy all files
 COPY app ./
 
+EXPOSE 80
 
-
-CMD ["npm", "start", "--port", "80"]
+CMD ["npm", "start"]
